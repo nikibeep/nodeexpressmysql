@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+    }
+  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addstudent"  >
+   <h3>ADD A NEW BOOK</h3>
+   
+    <hr>
+
+    <label for="name"><b>Title:</b></label>
+    <input type="text" placeholder="Enter Book Title" name="name" id="name" required>
+
+    <label for="phn"><b>ISBN:</b></label>
+    <input type="phone" placeholder="Enter ISBN Number" name="phone" id="phone" required>
+
+    <label for="eml-id"><b>Author:</b></label>
+    <input type="text" placeholder="Enter the Author" name="email" id="email">
+   
+  <div class="gender_g">
+     <strong>Type</strong>
+     <input type="radio" name="gender" id="" value="Paperback"> Paperback
+     <input type="radio" name="gender" id=""  value="Hardcover">  Hardcover
+  </div>
+    <button type="submit" class="registerbtn">Add a book</button>
+
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h3>Data Inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>Emailid or Phoneno already present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>
